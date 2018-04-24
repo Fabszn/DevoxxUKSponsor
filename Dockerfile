@@ -4,4 +4,4 @@ COPY ./build/libs/uk.jar /root/uk.jar
 
 WORKDIR /root
 
-CMD ["java", "-server", "-Xms4g", "-Xmx4g", "-XX:+UseG1GC", "-XX:MaxGCPauseMillis=100", "-XX:+UseStringDeduplication", "-jar", "uk.jar"]
+CMD ["java", "-server", "-XX:+UseG1GC", "-XX:MaxGCPauseMillis=100", "-XX:+UseStringDeduplication", "-jar", "uk.jar"]
